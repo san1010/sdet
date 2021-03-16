@@ -7,11 +7,11 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
     features = "src/FeatureFiles",
     glue = {"stepDefinition"},
-    tags = "@activity2_5",
-    plugin = {"pretty"},
+    tags = "@SimpleAlert",
+    plugin = {"html: test-reports"},
     monochrome = true
 )
 
-public class ActivitiesRunner {
+public class ActivitiesRunner2 {
     //empty
 }
