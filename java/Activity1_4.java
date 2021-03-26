@@ -1,32 +1,32 @@
-//insertion sort 
+package javaActvity4;
 
-package javaActivity3;
-
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Activity1_4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr= {10,4,18,1,9,20,14,5};
-		System.out.println("Array before sorting"+ Arrays.toString(arr));
-		insertionAscending(arr);
-		System.out.println("Array after sorting"+ Arrays.toString(arr));	
-	}
-	
-	static void insertionAscending(int iArray[])
-	{
-		int size=iArray.length,i;
+		List<String> myList=new ArrayList<>(); 
+		myList.add("Pujara");
+		myList.add("Gill");
+		myList.add("Ashwin");
+		myList.add("Vihari");
+		myList.add("Bumrah");
+		
+		//System.out.println(myList);
+		for (int i = 0; i < myList.size(); i++) {
+			System.out.println(myList.get(i));
+		}
+		
+		System.out.println("\nIn above list 3rd name is " + myList.get(2));
+		System.out.println("Is list contains Siraj? "+ myList.contains("Siraj"));
+		System.out.println("Current list Size is " + myList.size());
+		myList.remove(2);
+		System.out.println("Removed 3rd");
+		System.out.println("New size of the list is " + myList.size());
+		System.out.println("New List -> "+myList);
 
-		for (i = 0; i < size; i++) {
-			
-			int pivot=iArray[i];
-			int j=i-1;
-			while(j>=0 && pivot<iArray[j]){
-				iArray[j+1]=iArray[j];	
-				j=j-1;
-			}
-			iArray[j+1]=pivot;
-		}		
 	}
+
 }
